@@ -1,0 +1,5 @@
+fr/kinderrkill/Main.java
+ fr.kinderrkill.Main
+ fr.kinderrkill.Main$1
+fr/kinderrkill/ItemsGenerator.java
+ fr.kinderrkill.ItemsGenerator
