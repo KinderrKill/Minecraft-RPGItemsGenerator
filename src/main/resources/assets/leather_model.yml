@@ -1,0 +1,14 @@
+Item:
+  ==: org.bukkit.inventory.ItemStack
+  type:
+  meta:
+    ==: ItemMeta
+    meta-type: LEATHER_ARMOR
+    display-name: 
+    lore:
+    - 
+    color:
+      ==: Color
+      RED: 0
+      BLUE: 0
+      GREEN: 0

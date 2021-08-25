@@ -1,0 +1,9 @@
+Item:
+  ==: org.bukkit.inventory.ItemStack
+  type: 
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: 
+    lore:
+    -
