@@ -1,5 +1,6 @@
 package fr.kinderrkill.fxml;
 
+import fr.kinderrkill.ItemsGenerator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,7 +16,7 @@ public class MainWindowManager implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("List : " + ItemsGenerator.getAllFilesFromResource());
+        //System.out.println("List : " + ItemsGenerator.getAllFilesFromResource());
         ObservableList<String> items = FXCollections.observableArrayList(
 
         );
