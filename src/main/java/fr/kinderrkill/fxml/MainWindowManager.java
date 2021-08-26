@@ -9,8 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -23,6 +26,11 @@ public class MainWindowManager implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        //Default config
+        this.textFieldSelectedItem.setDisable(true);
+        this.textFieldSelectedItem.setStyle("-fx-opacity: 1;");
+
         initItemsList(false);
     }
 
@@ -34,6 +42,27 @@ public class MainWindowManager implements Initializable {
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             stage.close();
         }
+
+        // Items selections buttons
+        else if (event.getSource() == itemsSelectionButton) {
+            initItemsList(false);
+        } else if (event.getSource() == armorSelectionButton) {
+            initItemsList(true);
+        }
+    }
+
+    @FXML
+    void actionGeneratePerformed(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onMouseClicked(MouseEvent event) {
+        String selectedItem = itemsList.getSelectionModel().getSelectedItem();
+        if (selectedItem != null) {
+            selectedItem = selectedItem.substring(selectedItem.lastIndexOf("/") + 1, selectedItem.lastIndexOf(".png"));
+        }
+        this.textFieldSelectedItem.setText(selectedItem);
     }
 
     private void initItemsList(boolean armor) {
@@ -83,5 +112,33 @@ public class MainWindowManager implements Initializable {
     private Button quitButton;
 
     @FXML
+    private Button itemsSelectionButton;
+
+    @FXML
+    private Button armorSelectionButton;
+
+    @FXML
     private ListView<String> itemsList;
+
+    @FXML
+    private Button generateButton;
+
+    //Define panel variables
+    @FXML
+    private Text textSelectedItem;
+
+    @FXML
+    private TextField textFieldSelectedItem;
+
+    @FXML
+    private Text textCustomName;
+
+    @FXML
+    private TextField textFieldCustomName;
+
+    @FXML
+    private Text textStats1;
+
+    @FXML
+    private TextField textFieldStats1;
 }

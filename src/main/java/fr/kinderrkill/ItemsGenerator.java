@@ -29,6 +29,12 @@ public class ItemsGenerator {
         log("INIT");
     }
 
+    //Manager
+    public void generateJSON() {
+
+    }
+
+    //Utils
     public List<File> getAllFilesFromResource(String folder) throws URISyntaxException, IOException {
         ClassLoader classLoader = getClass().getClassLoader();
 
@@ -45,7 +51,7 @@ public class ItemsGenerator {
     public void log(String message) {
         System.out.println("[Generator] " + message);
     }
-    //Utils
+
     public static ItemsGenerator getInstance() {
         return instance;
     }
