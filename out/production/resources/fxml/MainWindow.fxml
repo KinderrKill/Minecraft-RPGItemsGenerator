@@ -3,21 +3,119 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.kinderrkill.fxml.MainWindowManager">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="881.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.kinderrkill.fxml.MainWindowManager">
    <children>
+      <Pane layoutX="6.0" layoutY="7.0" prefHeight="538.0" prefWidth="869.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button fx:id="quitButton" layoutX="811.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPerformed" text="Quitter" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
       <Text layoutX="273.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minecraft - RPG Item Generator" underline="true">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <ListView fx:id="itemsList" layoutX="30.0" layoutY="88.0" prefHeight="417.0" prefWidth="244.0" />
-      <VBox layoutX="308.0" layoutY="88.0" prefHeight="417.0" prefWidth="541.0" style="-fx-background-color: #BDB7AB;" />
-      <Button fx:id="quitButton" layoutX="823.0" layoutY="4.0" mnemonicParsing="false" onAction="#actionPerformed" text="Quitter" />
+      <ListView fx:id="itemsList" layoutX="30.0" layoutY="88.0" onMouseClicked="#onMouseClicked" prefHeight="417.0" prefWidth="244.0" />
+      <Button fx:id="itemsSelectionButton" layoutX="30.0" layoutY="513.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="25.0" prefWidth="113.0" text="Armes" />
+      <Button fx:id="armorSelectionButton" layoutX="161.0" layoutY="513.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="25.0" prefWidth="113.0" text="Armures" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Items séléctionné :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Pane layoutX="302.0" layoutY="88.0" prefHeight="417.0" prefWidth="554.0" style="-fx-background-color: #D3C3B0;">
+         <children>
+            <Text fx:id="textSelectedItem" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items séléctioné :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="textFieldSelectedItem" layoutX="128.0" layoutY="10.0" prefHeight="25.0" prefWidth="419.0" />
+            <Text fx:id="textCustomName" layoutX="14.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldCustomName" layoutX="128.0" layoutY="95.0" prefHeight="25.0" prefWidth="244.0" />
+            <Text fx:id="textDamage" layoutX="14.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dégâts :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldDamageMin" layoutX="67.0" layoutY="142.0" prefHeight="25.0" prefWidth="50.0" />
+            <TextField fx:id="fieldDamageMax" layoutX="121.0" layoutY="142.0" prefHeight="25.0" prefWidth="50.0" />
+            <Text fx:id="textFileName" layoutX="15.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du fichier :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldFileName" layoutX="120.0" layoutY="49.0" prefHeight="25.0" prefWidth="427.0" />
+            <Text fx:id="textLevelObject" layoutX="385.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau Obj :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldLevelObject" layoutX="470.0" layoutY="95.0" prefHeight="25.0" prefWidth="76.0" />
+            <Text fx:id="textAgility" layoutX="13.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agilité :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldAgility" layoutX="66.0" layoutY="179.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textBlock" layoutX="12.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parade :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldBlock" layoutX="65.0" layoutY="211.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textArmor" layoutX="381.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armure :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldArmor" layoutX="439.0" layoutY="142.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textStamina" layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endurance :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldStamina" layoutX="90.0" layoutY="244.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textCCDamage" layoutX="12.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dégats CC :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldCCDamage" layoutX="90.0" layoutY="291.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textCCChance" layoutX="12.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chance CC :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldCCChance" layoutX="90.0" layoutY="322.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textSpeed" layoutX="303.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vitesse déplacement :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldSpeed" layoutX="439.0" layoutY="179.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textLvNeeded" layoutX="12.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level requis :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldLvNeeded" layoutX="100.0" layoutY="366.0" prefHeight="25.0" prefWidth="49.0" />
+         </children>
+      </Pane>
+      <Button fx:id="generateButton" layoutX="475.0" layoutY="509.0" mnemonicParsing="false" onAction="#actionGeneratePerformed" prefHeight="32.0" prefWidth="210.0" text="Générer" />
    </children>
    <opaqueInsets>
       <Insets />

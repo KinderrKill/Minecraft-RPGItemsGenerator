@@ -1,6 +1,7 @@
 package fr.kinderrkill.fxml;
 
 import fr.kinderrkill.ItemsGenerator;
+import fr.kinderrkill.JSONFileManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -53,7 +54,27 @@ public class MainWindowManager implements Initializable {
 
     @FXML
     void actionGeneratePerformed(ActionEvent event) {
+        JSONFileManager jsonFileManager = new JSONFileManager();
+        Map<String, String> data = new HashMap<>();
 
+        if (!fieldDamageMin.getText().isEmpty() && !fieldDamageMax.getText().isEmpty())  data.put("Dégât", "+" + fieldDamageMin.getText() + "-" + fieldDamageMax.getText());
+
+        if (!fieldArmor.getText().isEmpty()) data.put("Armure", fieldArmor.getText());
+
+        if (!fieldAgility.getText().isEmpty()) data.put("Agilité", fieldAgility.getText());
+        if (!fieldBlock.getText().isEmpty()) data.put("Parade", fieldBlock.getText());
+        if (!fieldStamina.getText().isEmpty()) data.put("Endurance", fieldStamina.getText());
+        if (!fieldCCDamage.getText().isEmpty()) data.put("Dégâts CC", fieldCCDamage.getText());
+        if (!fieldCCChance.getText().isEmpty()) data.put("Chance CC", fieldCCChance.getText());
+
+        if (!fieldSpeed.getText().isEmpty()) data.put("Vitesse", fieldSpeed.getText());
+
+        if (!fieldLvNeeded.getText().isEmpty()) data.put("Level requis", fieldLvNeeded.getText());
+
+        List<String> lores = new ArrayList<>();
+        lores.add("Test Lore 1");
+
+        jsonFileManager.test(textFieldSelectedItem.getText().toUpperCase(), fieldFileName.getText(), fieldCustomName.getText(), Integer.parseInt(fieldLevelObject.getText()), data, lores);
     }
 
     @FXML
@@ -112,18 +133,14 @@ public class MainWindowManager implements Initializable {
     private Button quitButton;
 
     @FXML
+    private ListView<String> itemsList;
+
+    @FXML
     private Button itemsSelectionButton;
 
     @FXML
     private Button armorSelectionButton;
 
-    @FXML
-    private ListView<String> itemsList;
-
-    @FXML
-    private Button generateButton;
-
-    //Define panel variables
     @FXML
     private Text textSelectedItem;
 
@@ -134,11 +151,77 @@ public class MainWindowManager implements Initializable {
     private Text textCustomName;
 
     @FXML
-    private TextField textFieldCustomName;
+    private TextField fieldCustomName;
 
     @FXML
-    private Text textStats1;
+    private Text textDamage;
 
     @FXML
-    private TextField textFieldStats1;
+    private TextField fieldDamageMin;
+
+    @FXML
+    private TextField fieldDamageMax;
+
+    @FXML
+    private Text textFileName;
+
+    @FXML
+    private TextField fieldFileName;
+
+    @FXML
+    private Text textLevelObject;
+
+    @FXML
+    private TextField fieldLevelObject;
+
+    @FXML
+    private Text textAgility;
+
+    @FXML
+    private TextField fieldAgility;
+
+    @FXML
+    private Text textBlock;
+
+    @FXML
+    private TextField fieldBlock;
+
+    @FXML
+    private Text textArmor;
+
+    @FXML
+    private TextField fieldArmor;
+
+    @FXML
+    private Text textStamina;
+
+    @FXML
+    private TextField fieldStamina;
+
+    @FXML
+    private Text textCCDamage;
+
+    @FXML
+    private TextField fieldCCDamage;
+
+    @FXML
+    private Text textCCChance;
+
+    @FXML
+    private TextField fieldCCChance;
+
+    @FXML
+    private Text textSpeed;
+
+    @FXML
+    private TextField fieldSpeed;
+
+    @FXML
+    private Text textLvNeeded;
+
+    @FXML
+    private TextField fieldLvNeeded;
+
+    @FXML
+    private Button generateButton;
 }

@@ -40,18 +40,79 @@
                </font>
             </Text>
             <TextField fx:id="textFieldSelectedItem" layoutX="128.0" layoutY="10.0" prefHeight="25.0" prefWidth="419.0" />
-            <Text fx:id="textCustomName" layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" underline="true">
+            <Text fx:id="textCustomName" layoutX="14.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="textFieldCustomName" layoutX="58.0" layoutY="71.0" prefHeight="25.0" prefWidth="489.0" />
-            <Text fx:id="textStats1" layoutX="14.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stats 1 :" underline="true">
+            <TextField fx:id="fieldCustomName" layoutX="128.0" layoutY="95.0" prefHeight="25.0" prefWidth="244.0" />
+            <Text fx:id="textDamage" layoutX="14.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dégâts :" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="textFieldStats1" layoutX="67.0" layoutY="117.0" prefHeight="25.0" prefWidth="54.0" />
+            <TextField fx:id="fieldDamageMin" layoutX="67.0" layoutY="142.0" prefHeight="25.0" prefWidth="50.0" />
+            <TextField fx:id="fieldDamageMax" layoutX="121.0" layoutY="142.0" prefHeight="25.0" prefWidth="50.0" />
+            <Text fx:id="textFileName" layoutX="15.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom du fichier :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldFileName" layoutX="120.0" layoutY="49.0" prefHeight="25.0" prefWidth="427.0" />
+            <Text fx:id="textLevelObject" layoutX="385.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Niveau Obj :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldLevelObject" layoutX="470.0" layoutY="95.0" prefHeight="25.0" prefWidth="76.0" />
+            <Text fx:id="textAgility" layoutX="13.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agilité :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldAgility" layoutX="66.0" layoutY="179.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textBlock" layoutX="12.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parade :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldBlock" layoutX="65.0" layoutY="211.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textArmor" layoutX="381.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Armure :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldArmor" layoutX="439.0" layoutY="142.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textStamina" layoutX="12.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endurance :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldStamina" layoutX="90.0" layoutY="244.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textCCDamage" layoutX="12.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dégats CC :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldCCDamage" layoutX="90.0" layoutY="291.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textCCChance" layoutX="12.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chance CC :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldCCChance" layoutX="90.0" layoutY="322.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textSpeed" layoutX="303.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vitesse déplacement :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldSpeed" layoutX="439.0" layoutY="179.0" prefHeight="25.0" prefWidth="107.0" />
+            <Text fx:id="textLvNeeded" layoutX="12.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level requis :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fieldLvNeeded" layoutX="100.0" layoutY="366.0" prefHeight="25.0" prefWidth="49.0" />
          </children>
       </Pane>
       <Button fx:id="generateButton" layoutX="475.0" layoutY="509.0" mnemonicParsing="false" onAction="#actionGeneratePerformed" prefHeight="32.0" prefWidth="210.0" text="Générer" />

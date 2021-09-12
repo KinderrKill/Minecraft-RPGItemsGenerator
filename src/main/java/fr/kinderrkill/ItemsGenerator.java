@@ -48,6 +48,16 @@ public class ItemsGenerator {
         return collect;
     }
 
+    public File getBaseFile() {
+        try {
+            return new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     public void log(String message) {
         System.out.println("[Generator] " + message);
     }
